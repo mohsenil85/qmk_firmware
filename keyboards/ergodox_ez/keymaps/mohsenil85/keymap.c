@@ -23,14 +23,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|  ,   |           |   .  |------+------+------+------+------+--------|
  * | LShift |  Z   |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   -  |   =  |  Up  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |fnlk  | META |Hyper | Opt  | Cmd  |                                       |  Up  | Down | Right|  Dn  | Left  |
+ *   |META  | NMFN | LMIR | Opt  | Cmd  |                                       |  Up  | Down | Right|  Dn  | Left  |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        | Back | Enter|       | VolUp|VolDn |
  *                                 ,------|------|------|       |------+--------+------.
- *                                 |      |      | Mouse|       | Mute |        |      |
+ *                                 |      |      | MOUS |       | Mute |        |      |
  *                                 | Del  |  Tab |------|       |------| Enter  | Space|
- *                                 |      |      |Fn/Num|       |Fn/Num|        |      |
+ *                                 |      |      |NMFN  |       |NMFN  |        |      |
  *                                 `--------------------'       `----------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
@@ -69,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *   |      |      |      |      |      |                                       |      |      | Home | PgDn | End   |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        | MrLk | Spc  |       | BrDn | BrUp |
+ *                                        | Frwd | Spc  |       | BrDn | BrUp |
  *                                 ,------|------|------|       |------+------+------.
  *                                 |      |      | MsLk |       | MsLk |      |      |
  *                                 |      |      |------|       |------| KEnt |      |
@@ -83,8 +83,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TRNS,KC_F11,KC_F12, KC_F13, KC_F14, KC_F15, KC_BTN2,
        KC_CAPS,KC_F16,KC_F17, KC_F18, KC_F19, KC_F20,
        KC_LSPO,KC_F21,KC_F22, KC_F23, KC_F24, KC_APP,KC_BTN1,
-       KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
-                                      TG(LMIR), KC_SPC,
+       KC_TRNS,KC_TRNS,TG(LMIR),KC_TRNS,KC_TRNS,
+                                      LGUI(KC_RBRC), KC_SPC,
                                               TG(MOUS),
                                KC_TRNS,KC_TRNS,KC_TRNS,
        // right hand
@@ -186,6 +186,48 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 
+/* Keymap Dvorak
+ *
+ * ,--------------------------------------------------.           ,--------------------------------------------------.
+ * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
+ * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
+ * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
+ * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+ * |        |      |      |      |      |      |------|           |------|      |      |      |      |      |        |
+ * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+ * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
+ * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
+ *   |      |      |      |      |      |                                       |      |      |      |      |      |
+ *   `----------------------------------'                                       `----------------------------------'
+ *                                        ,-------------.       ,-------------.
+ *                                        |      |      |       |      |      |
+ *                                 ,------|------|------|       |------+------+------.
+ *                                 |      |      |      |       |      |      |      |
+ *                                 |      |      |------|       |------|      |      |
+ *                                 |      |      |      |       |      |      |      |
+ *                                 `--------------------'       `--------------------'
+ */
+
+[DVRK] = LAYOUT_ergodox(
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+                                          KC_TRNS, KC_TRNS,
+                                                   KC_TRNS,
+                                 KC_TRNS, KC_TRNS, KC_TRNS,
+   // right hand
+      KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+                KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+                         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS, KC_TRNS,
+      KC_TRNS,
+      KC_TRNS, KC_TRNS, KC_TRNS
+  ),
+
 
 /* Keymap 7: Keyboard control
  *
@@ -210,7 +252,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 
 [META] = LAYOUT_ergodox(
-       KC_NO, TO(BASE), TO(2), TO(3), TO(4), TO(5), TO(6),
+       KC_NO, TO(BASE), TG(2), TG(3), TG(4), TG(5), TG(6),
        KC_NO, KC_NO, KC_NO, KC_NO, RESET, KC_NO, KC_NO,
        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
