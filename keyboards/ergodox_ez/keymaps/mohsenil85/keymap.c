@@ -119,6 +119,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 |      |      |      |       |      |      |      |
  *                                 `--------------------'       `--------------------'
  */
+
 [SYMB] = LAYOUT_ergodox(
        KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_TRNS,
        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
@@ -138,6 +139,52 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TRNS,
        KC_TRNS, KC_TRNS, KC_TRNS
 ),
+
+
+// Keymap 3: Left Mirror
+/*
+*,--------------------------------------------------.           ,--------------------------------------------------.
+*|  Del   |  6   |  7   |  8   |  9   |  0   |  ]   |           |      |      |      |      |      |      |        |
+*|--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
+*|   \    |   Y  |  U   |   I  |  O   |  P   |      |           |      |      |      |      |      |      |        |
+*|--------+------+------+------+------+------|  '   |           |      |------+------+------+------+------+--------|
+*|   Ent  |  H   |  J   |  K   |  L   |  ;   |------|           |------|      |      |      |      |      |        |
+*|--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+*|        |  N   |  M   |  _   |  +   |      |  .   |           |      |      |      |      |      |      |        |
+*`--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
+*  |      |      |      |      |      |                                       |      |      |      |      |      |
+*  `----------------------------------'                                       `----------------------------------'
+*                                       ,-------------.       ,-------------.
+*                                       |      |      |       |      |      |
+*                                ,------|------|------|       |------+------+------.
+*                                |      |      |      |       |      |      |      |
+*                                |      |      |------|       |------|      |      |
+*                                |      |      |      |       |      |      |      |
+*                                `--------------------'       `--------------------'
+*/
+
+[LMIR] = LAYOUT_ergodox(
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+                                          KC_TRNS, KC_TRNS,
+                                                   KC_TRNS,
+                                 KC_TRNS, KC_TRNS, KC_TRNS,
+   // right hand
+      KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+                KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+                         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS, KC_TRNS,
+      KC_TRNS,
+      KC_TRNS, KC_TRNS, KC_TRNS
+  ),
+
+
+
 
 
 /* Keymap 7: Keyboard control
@@ -161,7 +208,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 |      |      |      |       |      |      |      |
  *                                 `--------------------'       `--------------------'
  */
-// MEDIA AND MOUSE
+
 [META] = LAYOUT_ergodox(
        KC_NO, TO(BASE), TO(2), TO(3), TO(4), TO(5), TO(6),
        KC_NO, KC_NO, KC_NO, KC_NO, RESET, KC_NO, KC_NO,
@@ -271,5 +318,6 @@ void matrix_scan_user(void) {
 *      KC_TRNS,
 *      KC_TRNS, KC_TRNS, KC_TRNS
 *  ),
-* };
+*
+*
 */
