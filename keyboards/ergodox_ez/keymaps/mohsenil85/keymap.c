@@ -95,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                          KC_TRNS,  KC_TRNS, KC_HOME, KC_PGDN, KC_END,
        KC_SCRL,KC_PAUS,
         TG(MOUS),
-       KC_TRNS, KC_KENT, KC_TRNS
+       KC_TRNS, KC_PENT, KC_TRNS
 ),
 /* Keymap 2: Media and mouse keys
  *
