@@ -6,7 +6,7 @@
 #define NMFN  1 // numpad, function
 #define SYMB  2 // symbols 
 #define LMIR  3 // left mirror
-#define DVRK  4 // dvorak
+#define CRWL  4 // dvorak
 #define MOUS  5 // mouse keys
 #define MDIA  6 // media keys
 #define META  7 // keyboard control
@@ -21,7 +21,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |Ctrl/Esc|   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  |Ret/Ctrl|
  * |--------+------+------+------+------+------|  ,   |           |   .  |------+------+------+------+------+--------|
- * | LShift |  Z   |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   -  |   =  |  Up  | RShift |
+ * | LShift |  Z   |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |  Up  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |META  | NMFN | LMIR | Opt  | Cmd  |                                       |  Up  | Down | Right|  Dn  | Left  |
  *   `----------------------------------'                                       `----------------------------------'
@@ -49,7 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              KC_RBRC,  KC_6,   KC_7,   KC_8,   KC_9,   KC_0,     KC_BSPC,
              KC_QUOT,  KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,     KC_BSLS,
                        KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN,  CTL_T(KC_ENT),
-	     KC_DOT,   KC_N,   KC_M,   KC_MINS,KC_EQL, KC_UP,    KC_RSFT,
+	     KC_DOT,   KC_N,   KC_M,   KC_MINS, KC_EQL, KC_UP,    KC_RSFT,
                                KC_RGUI,KC_RALT,KC_LEFT,KC_DOWN,  KC_RGHT,
              KC_VOLD,KC_VOLU,
              KC_MUTE,
@@ -186,16 +186,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 
-/* Keymap Dvorak
+/* Keymap Crawl
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |        |  -   |   =  |  ;   |  P   |  Y   |      |           |      |  F   |  G   |  C   |  R   |   Z  |        |
+ * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |   A  |   O  |   E  |   I  |  U   |------|           |------|  D   |  H   |   T  |  N   |   S  |        |
+ * |        |      |      |      |      |      |------|           |------|      |      |      |      |      |        |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |   L  |  Q   |   J  |  K   |  B   |      |           |      |  M   |  W   |   V  |      |      |        |
+ * |        |      |      |      |      |  ,   |   .  |           |   B  |      |      |      |      |      |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |      |      |      |      |      |                                       |      |      |      |      |      |
  *   `----------------------------------'                                       `----------------------------------'
@@ -208,20 +208,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 `--------------------'       `--------------------'
  */
 
-[DVRK] = LAYOUT_ergodox(
+[CRWL] = LAYOUT_ergodox(
       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-      KC_TRNS, KC_MINS, KC_EQL,  KC_SCLN, KC_P,    KC_Y, KC_TRNS,
-      KC_TRNS, KC_A,    KC_O,    KC_E,    KC_I,    KC_U, 
-      KC_TRNS, KC_L,    KC_Q,    KC_J,    KC_K,    KC_B, KC_TRNS,
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_COMM, KC_DOT,
       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                                           KC_TRNS, KC_TRNS,
                                                    KC_TRNS,
                                  KC_TRNS, KC_TRNS, KC_TRNS,
    // right hand
-      KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-      KC_TRNS,  KC_F, KC_G, KC_C, KC_R, KC_Z, KC_TRNS,
-                KC_D, KC_H, KC_T, KC_N, KC_S, KC_TRNS,
-      KC_TRNS,  KC_M, KC_W, KC_V, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+               KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_B,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
       KC_TRNS, KC_TRNS,
       KC_TRNS,
@@ -324,7 +324,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 7: Keyboard control
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |        | BASE | SYMB | LMIR | DVRK | MOUS | MDIA |           |      |      |      |      |      |      |        |
+ * |        | BASE | SYMB | LMIR | CRWL | MOUS | MDIA |           |      |      |      |      |      |      |        |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * |        | MR1  | MP1  |      |RESET |      |      |           |      |      |      |      |      |      |        |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
@@ -387,7 +387,7 @@ void matrix_scan_user(void) {
     case LMIR:
       ergodox_right_led_3_on();
       break;
-    case DVRK:
+    case CRWL:
       ergodox_right_led_1_on();
       ergodox_right_led_2_on();
       break;
