@@ -6,7 +6,7 @@
 #define NMFN  1 // numpad, function
 #define SYMB  2 // symbols 
 #define LMIR  3 // left mirror
-#define CRWL  4 // dvorak
+#define CRWL  4 // dungeon crawl
 #define MOUS  5 // mouse keys
 #define MDIA  6 // media keys
 #define META  7 // keyboard control
@@ -36,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
 // Otherwise, it needs KC_*
 [BASE] = LAYOUT_ergodox(  // layer 0 : default
-        // left hand
+    // left hand
         KC_GRV,         KC_1,         KC_2,   KC_3,   KC_4,   KC_5,   KC_LBRC,
         KC_TAB,         KC_Q,         KC_W,   KC_E,   KC_R,   KC_T,   KC_SLSH,
         CTL_T(KC_ESC),  KC_A,         KC_S,   KC_D,   KC_F,   KC_G,
