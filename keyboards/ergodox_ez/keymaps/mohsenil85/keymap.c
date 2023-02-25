@@ -326,9 +326,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |        | BASE | SYMB | LMIR | CRWL | MOUS | MDIA |           |      |      |      |      |      |      |        |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |        | MR1  | MP1  |      |RESET |      |      |           |      |      |      |      |      |      |        |
+ * |        | MR1  | MP1  |      |RESET | SWAP |      |           |      |      |      |      |      |      |        |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        | MR2  | MP2  |      |      |      |------|           |------|      |      |      |      |      |        |
+ * |        | MR2  | MP2  |      |      | NORM |------|           |------|      |      |      |      |      |        |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |        | MQ   |      |      |      |      |      |           |      |      |      |      |      |      |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
@@ -345,7 +345,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [META] = LAYOUT_ergodox(
        KC_NO, TO(BASE), TG(2), TG(3), TG(4), TG(5), TG(6),
-       KC_NO, DYN_REC_START1, DYN_MACRO_PLAY1, KC_NO, RESET, AG_SWAP, KC_NO,
+       KC_NO, DYN_REC_START1, DYN_MACRO_PLAY1, KC_NO, QK_BOOT, AG_SWAP, KC_NO,
        KC_NO, DYN_REC_START2, DYN_MACRO_PLAY2, KC_NO, KC_NO, AG_NORM,
        KC_NO, DYN_REC_STOP, KC_NO, KC_NO, KC_NO, LED_LEVEL, KC_NO,
        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
