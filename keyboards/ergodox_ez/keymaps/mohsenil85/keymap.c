@@ -115,13 +115,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 1: Numpad/ Function
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |  Esc   |  F1  |  F2  |  F3  |  F4  |  F5  |MClik |           |      |  F6  |  F7  |  F8  |  F9  |  F10 |   Del  |
+ * |  Esc   |  F1  |  F2  |  F3  |  F4  |  F5  |MClik |           | Tab  |  F6  |  F7  |  F8  |  F9  |  F10 |   Del  |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |        | F11  |  F12 |  F13 | F14  | F15  |      |           |      |  np+ |   7  |   8  |   9  | np*  |   Ins  |
- * |--------+------+------+------+------+------| RClik|           | Tab  |------+------+------+------+------+--------|
- * |  Caps  | F16  | F17  |  F18 | F19  | F20  |------|           |------| np-  |   4  |   5  |   6  | np/  |  Ret   |
+ * |        | F11  |  F12 |  F13 | F14  | F15  |      |           |      |  np+ |   7  |   8  |   9  |  np* |   Ins  |
+ * |--------+------+------+------+------+------| RClik|           | WhUp |------+------+------+------+------+--------|
+ * |  Caps  | F16  | F17  |  F18 | F19  | F20  |------|           |------|  np- |   4  |   5  |   6  |  np/ |  Ret   |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |LShft ( | PrScr| SclLk| Paus |      |KC_APP| LClik|           |      |   0  |   1  |   2  |   3  | PgUp | RSft ) |
+ * |LShft ( | PrScr| SclLk| Paus |      |KC_APP| LClik|           | WhDn |   0  |   1  |   2  |   3  | PgUp | RSft ) |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |      |      |      |      |      |                                       |      |      | Home | PgDn | End   |
  *   `----------------------------------'                                       `----------------------------------'
@@ -146,10 +146,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
        KC_TRNS,KC_TRNS,TG(NMFN),
        // right hand
-       KC_TRNS, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_DEL,
-       KC_TAB,  KC_PPLS, KC_P7,   KC_P8,   KC_P9,   KC_PAST,  KC_INS,
+       KC_TAB,  KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_DEL,
+       KC_WH_U, KC_PPLS, KC_P7,   KC_P8,   KC_P9,   KC_PAST,  KC_INS,
                 KC_PMNS, KC_P4,   KC_P5,   KC_P6,   KC_PSLS,  KC_ENT,
-       KC_TRNS, KC_P0,   KC_P1,   KC_P2,   KC_P3,   KC_PGUP,  SC_RCPC,
+       KC_WH_D, KC_P0,   KC_P1,   KC_P2,   KC_P3,   KC_PGUP,  SC_RCPC,
                          KC_TRNS, KC_TRNS, KC_HOME, KC_PGDN, KC_END,
        KC_BRID,KC_BRIU,
        TG(MOUS),
