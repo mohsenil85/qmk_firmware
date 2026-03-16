@@ -302,19 +302,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap Mouse Layout
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |        |      |      |      |      |      |      |           | Acc1 | Copy | Paste|NewTab|Close | Focus| Back   |
+ * |        |      |      |      |      |      | m3   |           | Acc1 | Copy | Paste|NewTab|Close | Focus| Back   |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * |        |      |      |      |      |      |      |           | Acc2 | m1   |  m2  | m3   |  m4  |  m5  |  Frwd  |
- * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+ * |--------+------+------+------+------+------| m2   |           |      |------+------+------+------+------+--------|
  * |        |      |      |      |      |      |------|           |------| mLf  |  mDn | mUp  | mRt  | Esc  |        |
  * |--------+------+------+------+------+------|      |           | Acc3 |------+------+------+------+------+--------|
- * |        |      |      |      |      |      |      |           |      | mwLf | mwDn | mwUp |  mRt |  mUp |        |
+ * |        |      |      |      |      |      |  m1  |           |      | mwLf | mwDn | mwUp |  mRt |  mUp |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |      |      |      |      |      |                                       |      |      |  mLf |  mDn |  mRt   |
- *   `----------------------------------'                                       `----------------------------------'
- *                                        ,-------------.       ,-------------.
- *                                        |      |      |       |      |      |
- *                                 ,------|------|------|       |------+------+------.
+ *   |      |      |      |      |      |                                       |      |      |  mLf |        ,------|------|------|       |------+------+------.
  *                                 |      |      |      |       |      |      |      |
  *                                 |      |      |------|       |------|  m1  |  m2  |
  *                                 |      |      |      |       |      |      |      |
@@ -322,10 +318,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 
   [MOUS] = LAYOUT_ergodox(
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_BTN3,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_BTN2,
        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_BTN1,
        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                                            KC_TRNS, KC_TRNS,
                                                     KC_TRNS,
