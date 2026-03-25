@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        | Enter| Esc  |       | VolUp|VolDn |
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | MOUS |       | Mute |        |      |
- *                                 | Del  |  Tab |------|       |------| Enter  | SPC  |
+ *                                 | Del  |  SPC |------|       |------| Enter  | SPC  |
  *                                 |      |      | NMFN |       | NMFN |        |      |
  *                                 `--------------------'       `----------------------'
  */
@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MO(META),       KC_HYPR, MO(LMIR), KC_LALT, KC_LGUI,
 	                                                 KC_ENT, KC_ESC,
                                                                MO(MOUS),
-                                                KC_BSPC,KC_TAB,MO(NMFN),
+                                                KC_BSPC,KC_SPC,MO(NMFN),
         // right hand
              KC_RBRC, KC_6,  KC_7,    KC_8,    KC_9,    KC_0,     KC_BSPC,
              KC_QUOT, KC_Y,  KC_U,    KC_I,    KC_O,    KC_P,     KC_BSLS,
@@ -129,7 +129,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        | Ctrl | Spc  |       | BrDn | BrUp |
  *                                 ,------|------|------|       |------+------+------.
  *                                 |      |      | MsLk |       | MsLk |      |      |
- *                                 |      |      |------|       |------| KEnt |      |
+ *                                 |      | Tab  |------|       |------| KEnt |      |
  *                                 |      |      | FnLk |       | FnLk |      |      |
  *                                 `--------------------'       `--------------------'
  */
@@ -144,7 +144,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                   KC_LCTL, KC_SPC,
                                                          TG(MOUS),
 
-       KC_TRNS,KC_TRNS,TG(NMFN),
+       KC_TRNS,KC_TAB,TG(NMFN),
        // right hand
        KC_TRNS, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_DEL,
        KC_TAB,  KC_PPLS, KC_P7,   KC_P8,   KC_P9,   KC_PAST,  KC_INS,
