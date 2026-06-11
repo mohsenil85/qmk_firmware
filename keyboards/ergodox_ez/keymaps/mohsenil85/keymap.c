@@ -136,10 +136,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // numpad / function
 [NMFN] = LAYOUT_ergodox(
        // left hand
-       KC_ESC,  KC_F1,   KC_F2,   KC_F3,  KC_F4,  KC_F5,  KC_BTN3,
-       KC_TRNS, KC_F11,  KC_F12,  KC_F13, KC_F14, KC_F15, KC_BTN2,
+       KC_ESC,  KC_F1,   KC_F2,   KC_F3,  KC_F4,  KC_F5,  MS_BTN3,
+       KC_TRNS, KC_F11,  KC_F12,  KC_F13, KC_F14, KC_F15, MS_BTN2,
        KC_CAPS, KC_F16,  KC_F17,  KC_F18, KC_F19, KC_F20,
-       SC_LSPO, KC_PSCR, KC_SCRL, KC_PAUS, KC_NO, KC_APP, KC_BTN1,
+       SC_LSPO, KC_PSCR, KC_SCRL, KC_PAUS, KC_NO, KC_APP, MS_BTN1,
        KC_TRNS,KC_TRNS,TG(LMIR),KC_TRNS,KC_TRNS,
                                                   KC_LCTL, KC_SPC,
                                                          TG(MOUS),
@@ -318,23 +318,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 
   [MOUS] = LAYOUT_ergodox(
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_BTN3,
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_BTN2,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MS_BTN3,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MS_BTN2,
        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_BTN1,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MS_BTN1,
        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                                            KC_TRNS, KC_TRNS,
                                                     KC_TRNS,
                                   KC_TRNS, KC_TRNS, KC_TRNS,
     // right hand
-       KC_ACL0,  LGUI(KC_C), LGUI(KC_V), LGUI(KC_T), LGUI(KC_W), LGUI(KC_L), LGUI(KC_LBRC),
-       KC_ACL1,  KC_BTN1, KC_BTN2, KC_BTN3, KC_BTN4, KC_BTN5, LGUI(KC_RBRC),
-                 KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_ESC,  KC_TRNS,
-       KC_ACL2,  KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, KC_MS_U, KC_TRNS,
-                          KC_TRNS, KC_TRNS, KC_MS_L, KC_MS_D, KC_MS_R,
+       MS_ACL0,  LGUI(KC_C), LGUI(KC_V), LGUI(KC_T), LGUI(KC_W), LGUI(KC_L), LGUI(KC_LBRC),
+       MS_ACL1,  MS_BTN1, MS_BTN2, MS_BTN3, MS_BTN4, MS_BTN5, LGUI(KC_RBRC),
+                 MS_LEFT, MS_DOWN, MS_UP, MS_RGHT, KC_ESC,  KC_TRNS,
+       MS_ACL2,  MS_WHLL, MS_WHLD, MS_WHLU, MS_WHLR, MS_UP, KC_TRNS,
+                          KC_TRNS, KC_TRNS, MS_LEFT, MS_DOWN, MS_RGHT,
        KC_TRNS, KC_TRNS,
        KC_TRNS,
-       KC_TRNS, KC_BTN1, KC_BTN2
+       KC_TRNS, MS_BTN1, MS_BTN2
    ),
  
  
